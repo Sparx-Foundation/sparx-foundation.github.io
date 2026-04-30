@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sparx.Foundation — Low-level systems engineering, cryptography, and C2 infrastructure. Built in Rust. Secured at Ring-0."
+    />
+    <title>
+      Sparx.Foundation — Systems Engineering &amp; Security Research
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">
+          <span class="logo-mark">◆</span>
+          Sparx.Foundation
+        </a>
+        <ul class="nav__links">
+          <li><a href="#services">Capabilities</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Projects</a></li>
+          <li>
+            <a
+              href="https://github.com/Sparx-Foundation"
+              target="_blank"
+              rel="noopener"
+              >GitHub ↗</a
+            >
+          </li>
+          <li><a href="#contact" class="nav__cta">Get in touch</a></li>
+        </ul>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav__mobile" id="mobileMenu">
+        <ul>
+          <li><a href="#services">Capabilities</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Projects</a></li>
+          <li>
+            <a
+              href="https://github.com/Sparx-Foundation"
+              target="_blank"
+              rel="noopener"
+              >GitHub ↗</a
+            >
+          </li>
+          <li><a href="#contact">Get in touch</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__orb hero__orb--3"></div>
+        <div class="hero__grid"></div>
+      </div>
+      <div class="hero__content">
+        <span class="hero__eyebrow reveal">Est. 2022 · Worldwide</span>
+        <h1 class="hero__headline reveal">
+          Security at<br />
+          <em>the lowest</em><br />
+          level.
+        </h1>
+        <p class="hero__sub reveal">
+          Open-source systems engineering and security research.
+        </p>
+        <div class="hero__actions reveal">
+          <a
+            href="https://github.com/Sparx-Foundation"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--primary"
+            >View on GitHub ↗</a
+          >
+          <a href="#work" class="btn btn--ghost">Explore projects</a>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+      <!-- <div class="hero__stat-bar reveal">
+        <div class="stat">
+          <span class="stat__num" data-target="6">0</span
+          ><span class="stat__unit">+</span>
+          <p>Open-source projects</p>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="0">0</span
+          ><span class="stat__unit"></span>
+          <p>Ring-0 engineering</p>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="3">0</span
+          ><span class="stat__unit"></span>
+          <p>Core languages</p>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="2024">0</span
+          ><span class="stat__unit"></span>
+          <p>Founded</p>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">
+            Engineering at<br /><em>every layer</em>
+          </h2>
+        </div>
+        <div class="services__grid">
+          <div class="service-card reveal-up">
+            <div class="service-card__num">01</div>
+            <div class="service-card__icon">◈</div>
+            <h3>Low-Level &amp; Kernel</h3>
+            <p>
+              Ring-0 development, hypervisor security, Windows Kernel debugging,
+              HAL internals, and memory mapping. We go where most engineers
+              stop.
+            </p>
+            <a
+              href="https://github.com/Sparx-Foundation"
+              target="_blank"
+              rel="noopener"
+              class="service-card__link"
+              >View on GitHub →</a
+            >
+          </div>
+          <div class="service-card reveal-up" style="--delay: 0.1s">
+            <div class="service-card__num">02</div>
+            <div class="service-card__icon">◉</div>
+            <h3>Cryptography &amp; PKI</h3>
+            <p>
+              Public key infrastructure, distributed trust architectures,
+              3-Point Security models, and high-security protocol design
+              grounded in mathematical rigor.
+            </p>
+            <a
+              href="https://github.com/Sparx-Foundation"
+              target="_blank"
+              rel="noopener"
+              class="service-card__link"
+              >View on GitHub →</a
+            >
+          </div>
+          <div class="service-card reveal-up" style="--delay: 0.2s">
+            <div class="service-card__num">03</div>
+            <div class="service-card__icon">◇</div>
+            <h3>C2 Infrastructure</h3>
+            <p>
+              Design and implementation of full command-and-control
+              infrastructure — Rust server, C++ agent — built for cybersecurity
+              research and simulation environments.
+            </p>
+            <a
+              href="https://github.com/Sparx-Foundation/actrax"
+              target="_blank"
+              rel="noopener"
+              class="service-card__link"
+              >Actrax on GitHub →</a
+            >
+          </div>
+          <div class="service-card reveal-up" style="--delay: 0.3s">
+            <div class="service-card__num">04</div>
+            <div class="service-card__icon">◐</div>
+            <h3>Reverse Engineering</h3>
+            <p>
+              Binary analysis, deconstruction of complex software systems, and
+              identification of low-level vulnerabilities using Ghidra and
+              custom tooling.
+            </p>
+            <a
+              href="https://github.com/Sparx-Foundation"
+              target="_blank"
+              rel="noopener"
+              class="service-card__link"
+              >View on GitHub →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about__inner">
+        <div class="about__media">
+          <div class="about__image-frame">
+            <div class="about__image-bg"></div>
+            <div class="about__image-overlay">
+              <blockquote>
+                "Security is not a feature — it is the foundation everything
+                else is built upon."
+              </blockquote>
+            </div>
+          </div>
+          <div class="about__accent-card">
+            <span class="accent-num">2022</span>
+            <span>Stuttgart, Germany</span>
+          </div>
+        </div>
+        <div class="about__content">
+          <span class="section-tag">About the foundation</span>
+          <h2 class="section-title">
+            Open-source.<br /><em>No compromise.</em>
+          </h2>
+          <p class="about__lead">
+            Sparx.Foundation is an open-source security engineering organization
+            building tooling for cybersecurity research, systems programming,
+            and low-level infrastructure.
+          </p>
+          <p class="about__body">
+            We operate at the intersection of kernel engineering, cryptography,
+            and offensive security research. Our projects — from C2
+            infrastructure to Rust core libraries — are built in the open,
+            licensed transparently under our FOUL (Fair Open-Use License), and
+            engineered to the highest technical standard.
+          </p>
+          <ul class="about__values">
+            <li>
+              <span>◆</span> Open-source first — transparent, auditable,
+              reproducible
+            </li>
+            <li>
+              <span>◆</span> Rust &amp; C++ — performance and correctness at
+              every layer
+            </li>
+            <li>
+              <span>◆</span> Research-grade security, production-grade
+              engineering
+            </li>
+          </ul>
+          <a
+            href="https://github.com/Sparx-Foundation"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--primary"
+            >View on GitHub ↗</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Open-source projects</span>
+          <h2 class="section-title">Built in the<br /><em>open</em></h2>
+        </div>
+        <div class="work__grid">
+          <article
+            class="work-card work-card--large reveal-up"
+            onclick="
+              window.open(
+                'https://github.com/Sparx-Foundation/actrax',
+                '_blank',
+              )
+            "
+            style="cursor: pointer"
+          >
+            <div class="work-card__bg" style="--hue: 0"></div>
+            <div class="work-card__content">
+              <span class="work-card__tag"
+                >Rust · C2 Infrastructure · AGPL-3.0</span
+              >
+              <h3>Actrax — C2 Server</h3>
+              <p>
+                A full command-and-control server written in Rust. Designed for
+                cybersecurity simulations and red-team research. Paired with the
+                Actrax Demon C++ agent for a complete C2 stack.
+              </p>
+            </div>
+            <div class="work-card__arrow">↗</div>
+          </article>
+          <article
+            class="work-card reveal-up"
+            style="--delay: 0.1s"
+            onclick="
+              window.open(
+                'https://github.com/Sparx-Foundation/actrax_demon',
+                '_blank',
+              )
+            "
+            style="cursor: pointer"
+          >
+            <div class="work-card__bg" style="--hue: 20"></div>
+            <div class="work-card__content">
+              <span class="work-card__tag">C++ · Agent · GPL-3.0</span>
+              <h3>Actrax Demon</h3>
+              <p>
+                The C++ agent component of the Actrax C2 infrastructure.
+                Early-stage implant development for simulation environments.
+              </p>
+            </div>
+            <div class="work-card__arrow">↗</div>
+          </article>
+          <article
+            class="work-card reveal-up"
+            style="--delay: 0.2s"
+            onclick="
+              window.open('https://github.com/Sparx-Foundation/FOUL', '_blank')
+            "
+            style="cursor: pointer"
+          >
+            <div class="work-card__bg" style="--hue: 200"></div>
+            <div class="work-card__content">
+              <span class="work-card__tag">Licensing · Open Source</span>
+              <h3>FOUL License</h3>
+              <p>
+                The Fair Open-Use License — a transparent, purpose-built license
+                for security research and open-source infrastructure projects.
+              </p>
+            </div>
+            <div class="work-card__arrow">↗</div>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: 40px">
+          <a
+            href="https://github.com/orgs/Sparx-Foundation/repositories"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--ghost"
+            >All repositories on GitHub ↗</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <div class="cta__bg">
+        <div class="cta__orb"></div>
+      </div>
+      <div class="cta__content">
+        <span class="section-tag">Get involved</span>
+        <h2 class="cta__title">Contribute or<br /><em>collaborate.</em></h2>
+        <p>
+          We welcome contributors, security researchers, and collaborators.
+          Reach out or open an issue on GitHub.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-mark">◆</span>
+            Sparx.Foundation
+          </a>
+          <p>
+            Open-source security engineering. Built in Rust. Secured at Ring-0.
+          </p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#work">Projects</a></li>
+              <li><a href="#services">Capabilities</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/Sparx-Foundation"
+                  target="_blank"
+                  rel="noopener"
+                  >GitHub ↗</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://sparx.foundation"
+                  target="_blank"
+                  rel="noopener"
+                  >sparx.foundation ↗</a
+                >
+              </li>
+              <li>
+                <a href="mailto:contact@sparx.foundation"
+                  >contact@sparx.foundation</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Legal</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/Sparx-Foundation/FOUL"
+                  target="_blank"
+                  rel="noopener"
+                  >FOUL License ↗</a
+                >
+              </li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Sparx.Foundation. Open-source under FOUL License.</p>
+        <p>Worldwide</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
