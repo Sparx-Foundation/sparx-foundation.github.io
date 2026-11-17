@@ -3,118 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparx.Foundation</title>
+    <title>Sparx Foundation</title>
+    <meta name="description" content="Security tools and research from the Sparx Foundation, published with source. Windows internals, kernel drivers, hardware identity and cryptography.">
+    <meta property="og:title" content="Sparx Foundation">
+    <meta property="og:description" content="Security tools and research, published with source.">
+    <meta property="og:url" content="https://sparx.foundation">
+    <meta property="og:image" content="https://sparx.foundation/sparx.png">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <nav>
-        <div class="logo-container">
-            <img src="sparx.png" alt="Sparx Logo" class="logo-image">
-            <div class="logo-text">Sparx.<br><span>foundation</span></div>
-        </div>
-        <div class="nav-links">
-            <a href="#research-areas">Research Areas</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="https://github.com/sparx-foundation" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-    </nav>
+    <header class="page-head">
+        <a href="#top" class="mark">SPARX-FOUNDATION(7)</a>
+        <nav>
+            <a href="#research">research</a>
+            <a href="#projects">projects</a>
+            <a href="#about">about</a>
+            <a href="https://github.com/Sparx-Foundation" rel="noopener noreferrer">github&nbsp;↗</a>
+        </nav>
+    </header>
 
-    <main>
-        <section class="hero" id="home" style="border-top: none;">
-            <h1>Transparent security engineering.</h1>
-            <p>Applied research in kernel architecture, cryptography, and offensive tooling. Built for the community.</p>
-            <a href="https://github.com/sparx-foundation" target="_blank" rel="noopener noreferrer" class="cta-button">
-                <img src="github.svg" alt="GitHub Logo" class="github-icon" width="20" height="20">
-                View on GitHub
-            </a>
+    <main id="top">
+        <section class="intro">
+            <h1>Security tools and research, published with source.</h1>
+            <dl class="meta">
+                <dt>SCOPE</dt><dd>windows internals, kernel drivers, hardware identity, cryptography</dd>
+                <dt>SOURCE</dt><dd><a href="https://github.com/Sparx-Foundation" rel="noopener noreferrer">github.com/Sparx-Foundation</a></dd>
+                <dt>LICENSE</dt><dd><a href="https://github.com/Sparx-Foundation/FOUL" rel="noopener noreferrer">FOUL</a>, unless a repo says otherwise</dd>
+                <dt>CONTACT</dt><dd><a href="mailto:contact@sparx.foundation">contact@sparx.foundation</a></dd>
+            </dl>
         </section>
 
-        <section id="research-areas">
-            <h2 class="section-title">Research Areas</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Low-Level & Kernel</h3>
-                    <p>Ring-0 development, hypervisor security, Windows Kernel debugging, HAL internals, and memory mapping. We go where most engineers stop.</p>
-                </div>
-                <div class="card">
-                    <h3>Cryptography & PKI</h3>
-                    <p>Public key infrastructure, distributed trust architectures, 3-Point Security models, and high-security protocol design grounded in mathematical rigor.</p>
-                </div>
-                <div class="card">
-                    <h3>Reverse Engineering</h3>
-                    <p>Binary analysis, deconstruction of complex software systems, and identification of low-level vulnerabilities using Ghidra and custom tooling.</p>
-                </div>
+        <section id="research">
+            <h2>RESEARCH</h2>
+            <dl class="defs">
+                <dt>kernel</dt>
+                <dd>Windows drivers and kernel debugging. How the HAL, memory mapping and hypervisors behave in practice, not only on paper.</dd>
+                <dt>identity</dt>
+                <dd>Hardware IDs that can bind a licence to a machine without handing out its serial numbers, and that still hold up against spoofers.</dd>
+                <dt>crypto</dt>
+                <dd>PKI, distributed trust and protocol design.</dd>
+                <dt>reversing</dt>
+                <dd>Taking binaries apart with Ghidra and our own scripts to see what they actually do.</dd>
+            </dl>
+        </section>
+
+        <section id="projects">
+            <h2>PROJECTS</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>NAME</th><th>TYPE</th><th>LANG</th><th>LICENSE</th><th>STATUS</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/Sparx-Foundation/KEYED-HWID" rel="noopener noreferrer">KEYED-HWID&nbsp;↗</a></td>
+                            <td>library</td><td>Rust</td><td>Apache-2.0</td>
+                            <td><span class="status on">●</span> active</td>
+                        </tr>
+                        <tr class="desc">
+                            <td colspan="5">Hardware ID for Rust that never stores raw serials. Each component is hashed with a key, and a machine is still recognised after a disk or network card swap.</td>
+                        </tr>
+                        <tr>
+                            <td>HWID Lab</td>
+                            <td>test harness</td><td>Rust</td><td>MIT / Apache-2.0</td>
+                            <td><span class="status">○</span> in development</td>
+                        </tr>
+                        <tr class="desc">
+                            <td colspan="5">Tests whether KEYED-HWID notices spoofed, cloned or replayed hardware IDs. 17 scenarios, from a new SSD to a full spoof. Read-only: it never changes the system, altered values only exist in memory.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
         <section id="about">
-            <h2 class="section-title">About the Foundation</h2>
-            <div style="max-width: 800px;">
-                <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Built for the community.</h3>
-                <p style="color: var(--text-muted); font-size: 1.125rem;">
-                    Sparx.Foundation builds infrastructure for security research. No black boxes, no corporate telemetry. We focus on security engineering, cryptography, and kernel research — licensed transparently and engineered to the highest technical standard.
-                </p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Open-Source Projects</h2>
-            <div class="project-list">                
-                <div class="project-row interactive-box">
-                    <div class="project-info">
-                        <span style="font-size: 0.75rem; color: #f97316; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.25rem;">C++ · Architecture · GPL-3.0</span>
-                        <h4>plugz</h4>
-                        <p>A runtime-extensible service standard enabling seamless plugin hot-reloading and dynamic, schema-based registration.</p>
-                    </div>
-                    <a href="https://github.com/Sparx-Foundation/plugz" target="_blank" rel="noopener noreferrer" class="github-link">GitHub ↗</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">Work with us</h2>
-            <div style="max-width: 800px;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Contribute or collaborate.</h3>
-                <p style="color: var(--text-muted); font-size: 1.125rem; margin-bottom: 1.5rem;">
-                    We welcome contributors, security researchers, and collaborators. Reach out or open an issue on GitHub.
-                </p>
-                <a href="https://github.com/sparx-foundation" target="_blank" rel="noopener noreferrer" class="github-link" style="display:inline-flex; width:fit-content;">Join us on GitHub ↗</a>
-            </div>
+            <h2>ABOUT</h2>
+            <p>Sparx is a small group working on low-level security. We publish what we build so others can read it, check it and reuse it.</p>
+            <p>Found a bug or want to help? Open an issue on the repo it is about, or write to <a href="mailto:contact@sparx.foundation">contact@sparx.foundation</a>. A person reads it.</p>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="logo-container">
-                <img src="sparx.png" alt="Sparx Logo" class="logo-image">
-                <div class="logo-text">Sparx.<br><span>foundation</span></div>
-            </div>
-            
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h5>Navigate</h5>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#research-areas">Research Areas</a>
-                </div>
-                <div class="footer-column">
-                    <h5>Connect</h5>
-                    <a href="https://github.com/Sparx-Foundation" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                    <a href="https://sparx.foundation" target="_blank" rel="noopener noreferrer">sparx.foundation ↗</a>
-                    <a href="mailto:contact@sparx.foundation">contact@sparx.foundation</a>
-                </div>
-                <div class="footer-column">
-                    <h5>Legal</h5>
-                    <a href="https://github.com/Sparx-Foundation/FOUL" target="_blank" rel="noopener noreferrer">FOUL License ↗</a>
-                    <a href="#">Privacy</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Sparx.Foundation. Open-source under FOUL License. Worldwide.
-        </div>
+    <footer class="page-foot">
+        <span>sparx.foundation</span>
+        <span>2026</span>
+        <span>SPARX-FOUNDATION(7)</span>
     </footer>
 </body>
 </html>
